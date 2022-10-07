@@ -12,6 +12,7 @@
       <th>Id</th>
       <th>Title</th>
       <th>Description</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -20,6 +21,10 @@
       <td>{{ post.id }}</td>
       <td>{{ post.title }}</td>
       <td>{{ post.description }}</td>
+      <td>
+        <a [routerLink]="['/posts', 'edit', post.id]">Edit Post</a>&nbsp;
+        <a [routerLink]="['/posts', 'delete', post.id]">Delete Post</a>&nbsp;
+      </td>
     </tr>
   </tbody>
 </table>
