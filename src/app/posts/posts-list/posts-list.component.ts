@@ -15,4 +15,12 @@ export class PostsListComponent implements OnInit {
   ngOnInit(): void {
     this.posts$ = this.postService.entities$;
   }
+
+  onDeletePost(event: Event, id: string) {
+    event.preventDefault();
+    if (confirm('Are You Sure That You Want To Delete This Post?')) {
+      this.postService.delete(id);
+    }
+
+  }
 }

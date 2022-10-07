@@ -47,4 +47,14 @@ export class PostsDataService extends DefaultDataService<Post> {
             );
     }
 
+    override delete(id: string): Observable<string> {
+        return this.http.delete
+            (
+                `https://ngrx-data-b1bcf-default-rtdb.firebaseio.com/posts/${id}.json`,
+            ).pipe(
+                map((data) => {
+                    return id;
+                })
+            )
+    }
 }
