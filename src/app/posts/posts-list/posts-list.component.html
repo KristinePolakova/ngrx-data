@@ -1,4 +1,4 @@
-<div>
+<div class="mt-4">
   <h3>Posts List</h3>
   <hr />
 </div>
@@ -24,6 +24,8 @@
       <td>
         <a [routerLink]="['/posts', 'edit', post.id]">Edit Post</a>&nbsp;
         <a href="" (click)="onDeletePost($event, post.id!)">Delete Post</a
+        >&nbsp;
+        <a href="" [routerLink]="['/posts', 'details', post.id]">View Details</a
         >&nbsp;
       </td>
     </tr>

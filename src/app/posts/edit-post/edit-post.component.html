@@ -1,4 +1,4 @@
-<div>
+<div class="mt-4">
   <h3>Edit Post</h3>
   <hr />
 </div>
@@ -14,8 +14,13 @@
       <textarea class="form-control" formControlName="description"></textarea>
     </div>
 
-    <div>
-      <button type="submit" class="btn btn-primary">Update Post</button>
+    <div class="row">
+      <div class="col-md-6">
+        <button type="submit" class="btn btn-primary">Update Post</button>
+      </div>
+      <div class="col-md-6 text-end">
+        <a [routerLink]="['/posts']">Back To Posts</a>
+      </div>
     </div>
   </form>
 </div>
